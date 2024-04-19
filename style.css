@@ -169,3 +169,6 @@ footer a {
 #imageSlider img:not(:first-child) {
   display: none;
 }
+.clickHere {
+  color: red; /* Change color to red */
+}
