@@ -1,3 +1,4 @@
+/* CSS code */
 body {
   background-color: #073b4c;
   display: flex;
@@ -162,4 +163,9 @@ footer {
 
 footer a {
   color: white;
+}
+
+/* Hide all images except the first one */
+#imageSlider img:not(:first-child) {
+  display: none;
 }
