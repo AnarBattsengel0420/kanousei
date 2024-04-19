@@ -15,8 +15,8 @@ body {
 
 .birthdayCard {
   position: relative;
-  width: 270px;
-  height: 550px;
+  width: 290px;
+  height: 580px;
   cursor: pointer;
   transform-style: preserve-3d;
   transform: perspective(2500px);
