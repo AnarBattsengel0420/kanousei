@@ -5,31 +5,184 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Happy birthday project</title>
-  <link rel="stylesheet" href="style.css">
-  <script>
-    // JavaScript code to rotate images in the slider automatically
-    document.addEventListener("DOMContentLoaded", function() {
-      const imageSlider = document.getElementById('imageSlider');
-      let currentImageIndex = 0;
-      const images = imageSlider.getElementsByTagName('img');
+  <style>
+    body {
+      background-color: #073b4c;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-      function rotateImages() {
-        images[currentImageIndex].style.display = 'none';
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        images[currentImageIndex].style.display = 'block';
+    .body {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      margin-top: 20px; /* Adjust margin as needed */
+    }
+
+    .birthdayCard {
+      position: relative;
+      width: 250px;
+      height: 350px;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transform: perspective(2500px);
+      transition: 1s;
+      background-color: white; /* Background color for the card */
+      border-radius: 15px; /* Adding border radius */
+      margin-bottom: 20px; /* Adjust margin as needed */
+    }
+
+    .cardFront {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      transform-origin: left;
+      box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 30px 0 50px rgba(0, 0, 0, 0.4);
+      transition: .6s;
+    }
+
+    .happy {
+      font-family: Tahoma, sans-serif;
+      text-align: center;
+      margin: 30px;
+      background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+      transition: .1s;
+    }
+
+    .balloons {
+      position: absolute;
+    }
+
+    .balloonOne,
+    .balloonTwo,
+    .balloonThree,
+    .balloonFour {
+      position: absolute;
+      width: 85px;
+      height: 95px;
+      border-radius: 50%;
+    }
+
+    .balloonOne {
+      background-color: rgba(239, 71, 111, 0.7);
+      left: -10px;
+      top: 50px;
+    }
+
+    .balloonTwo {
+      background-color: rgba(255, 221, 51, 0.7); /* Yellow color */
+      left: 50px;
+      top: 20px;
+    }
+
+    .balloonThree {
+      background-color: rgba(255, 165, 0, 0.7); /* Orange color */
+      left: 110px;
+      top: 50px;
+    }
+
+    .balloonFour {
+      background-color: rgba(50, 205, 50, 0.7); /* Green color */
+      left: 170px;
+      top: 20px;
+    }
+
+    .cardInside {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+    }
+
+    p {
+      font-family: cursive;
+      margin: 15px 10px 10px 30px;
+      color: #333;
+    }
+
+    h2.rounded-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    .name {
+      position: absolute;
+      left: 150px;
+      /* top: 200px; */
+      color: #333;
+      text-decoration: underline;
+    }
+
+    .back {
+      font-family: Tahoma, sans-serif;
+      color: #333;
+      text-align: center;
+      margin: 30px;
+      outline-color: #333;
+      outline-style: dashed;
+    }
+
+    .birthdayCard:hover {
+      transform: perspective(2500px) rotate(5deg);
+      box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5);
+    }
+
+    .birthdayCard:hover .cardFront {
+      transform: rotateY(-160deg);
+    }
+
+    .birthdayCard:hover .happy {
+      visibility: hidden;
+    }
+
+    @keyframes blink {
+      0% {
+        color: white;
       }
+      20% {
+        color: yellow;
+      }
+      40% {
+        color: greenyellow;
+      }
+      60% {
+        color: red;
+      }
+      80% {
+        color: hotpink;
+      }
+      100% {
+        color: blue;
+      }
+    }
 
-      // Rotate images every 3 seconds
-      setInterval(rotateImages, 3000);
-    });
-  </script>
+    footer {
+      font-size: 10px;
+      color: white;
+      position: absolute;
+      bottom: 0px;
+    }
+
+    .rounded-image {
+      border-radius: 10px; /* Adjust border radius as needed */
+    }
+
+    footer a {
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <h2 class="rounded-image" id="imageSlider">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Jeon_Jungkook_at_the_White_House%2C_31_May_2022.jpg/220px-Jeon_Jungkook_at_the_White_House%2C_31_May_2022.jpg" alt="Image 1" style="width: 100%; max-width: 400px;">
-    <img src="https://i.pinimg.com/564x/8b/36/40/8b364051d8ad22807fde07131f26099a.jpg" alt="Image 2" style="width: 100%; max-width: 400px;">
-    <img src="https://i.pinimg.com/736x/5d/b1/d1/5db1d1bed75610fcb842c4f638e0d23b.jpg" alt="Image 3" style="width: 100%; max-width: 400px;">
-    <img src="https://i.pinimg.com/564x/82/c2/af/82c2afe8946abefa16eb5421ca3c8f52.jpg" alt="Image 4" style="width: 100%; max-width: 400px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Jeon_Jungkook_at_the_White_House%2C_31_May_2022.jpg/220px-Jeon_Jungkook_at_the_White_House%2C_31_May_2022.jpg" alt="Image 1">
+    <img src="https://i.pinimg.com/564x/8b/36/40/8b364051d8ad22807fde07131f26099a.jpg" alt="Image 2">
+    <img src="https://i.pinimg.com/736x/5d/b1/d1/5db1d1bed75610fcb842c4f638e0d23b.jpg" alt="Image 3">
+    <img src="https://i.pinimg.com/564x/82/c2/af/82c2afe8946abefa16eb5421ca3c8f52.jpg" alt="Image 4">
   </h2>
   <div class="body">
     <div class="birthdayCard">
