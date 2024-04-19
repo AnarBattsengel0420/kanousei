@@ -93,10 +93,15 @@ body {
 }
 
 p {
-  font-family: cursive;
+  font-family: 'Noto Sans', sans-serif; /* Change font for normal text */
   margin: 15px 10px 10px 30px;
   color: #333;
 }
+
+.birthdayMessage {
+  font-family: Arial, sans-serif; /* Change font for the birthday message */
+}
+
 h2{
    border-radius: 20px;
 }
