@@ -95,6 +95,9 @@ p {
   margin: 15px 10px 10px 30px;
   color: #333;
 }
+h2{
+   border-radius: 20px;
+}
 
 .name {
   position: absolute;
@@ -153,8 +156,7 @@ footer {
   position: absolute;
   bottom: 0px;
 }
-
-.rounded-image img {
+.rounded-image {
   border-radius: 10px; /* Adjust border radius as needed */
 }
 
