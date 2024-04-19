@@ -153,6 +153,9 @@ footer {
   position: absolute;
   bottom: 0px;
 }
+.rounded-image {
+  border-radius: 10px; /* Adjust border radius as needed */
+}
 
 footer a {
   color: white;
