@@ -6,23 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Happy birthday project</title>
   <link rel="stylesheet" href="style.css">
-  <script>
-    // JavaScript code to rotate images in the slider automatically
-    document.addEventListener("DOMContentLoaded", function() {
-      const imageSlider = document.getElementById('imageSlider');
-      let currentImageIndex = 0;
-      const images = imageSlider.getElementsByTagName('img');
-
-      function rotateImages() {
-        images[currentImageIndex].style.display = 'none';
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        images[currentImageIndex].style.display = 'block';
-      }
-
-      // Rotate images every 3 seconds
-      setInterval(rotateImages, 3000);
-    });
-  </script>
 </head>
 <body>
   <h2 class="rounded-image" id="imageSlider">
@@ -53,5 +36,6 @@
   <p>click here </p>
   <footer>
   </footer>
+  <script src="main.js"></script>
 </body>
 </html>
