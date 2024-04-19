@@ -81,6 +81,16 @@ body {
   left: 170px;
   top: 20px;
 }
+.balloonFive {
+  position: absolute;
+  width: 85px;
+  height: 95px;
+  border-radius: 50%;
+  background-color: rgba(255, 192, 203, 0.7); /* Pink color */
+  left: 230px; /* Adjust position as needed */
+  top: 50px; /* Adjust position as needed */
+}
+
 
 .cardInside {
   position: absolute;
