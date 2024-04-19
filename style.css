@@ -1,13 +1,12 @@
 body {
  background-color: #073b4c;
- margin: 0; /* Add this to remove default body margin */
 }
 
 .body {
  display: flex;
  align-items: center;
  justify-content: center;
- height: 100vh; /* Set body height to full viewport height */
+ margin-top: 100px;
 }
 
 h2 {
@@ -24,16 +23,13 @@ h2 {
  transform-style: preserve-3d;
  transform: perspective(2500px);
  transition: 1s;
- background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Jeon_Jungkook_at_the_White_House%2C_31_May_2022.jpg/220px-Jeon_Jungkook_at_the_White_House%2C_31_May_2022.jpg);
- background-size: cover;
- border-radius: 20px; /* Adding border radius */
 }
 
 .cardFront {
  position: relative;
  background-color: #fff;
- width: 100%; /* Adjusted width to fill the container */
- height: 100%; /* Adjusted height to fill the container */
+ width: 250px;
+ height: 350px;
  overflow: hidden;
  transform-origin: left;
  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 30px 0 50px rgba(0, 0, 0, 0.4);
@@ -130,8 +126,8 @@ h2 {
 .cardInside {
  position: absolute;
  background-color: #fff;
- width: 100%; /* Adjusted width to fill the container */
- height: 100%; /* Adjusted height to fill the container */
+ width: 250px;
+ height: 350px;
  z-index: -1;
  left: 0;
  top: 0;
@@ -199,7 +195,6 @@ p {
   color: blue;
  }
 }
-
 footer{
  font-size: 10px;
  color: white;
@@ -209,3 +204,4 @@ footer{
 footer a{
  color: white;
 }
+
