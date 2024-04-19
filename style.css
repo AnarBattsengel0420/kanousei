@@ -42,15 +42,42 @@ body {
   transition: .1s;
 }
 
+.balloons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.balloonOne,
+.balloonTwo,
+.balloonThree,
+.balloonFour {
+  width: 85px;
+  height: 95px;
+  border-radius: 50%;
+}
+
+.balloonOne {
+  background-color: rgb(239, 71, 111, 0.7);
+}
+
+.balloonTwo {
+  background-color: greenyellow; /* Change color */
+}
+
+.balloonThree {
+  background-color: orange; /* Change color */
+}
+
+.balloonFour {
+  background-color: green; /* Change color */
+}
+
 .clickHere {
-  position: absolute;
-  bottom: 10px; /* Adjust as needed */
-  left: 50%;
-  transform: translateX(-50%);
   font-size: 14px;
   color: blue;
   text-decoration: underline;
   cursor: pointer;
 }
-
-/* Rest of the CSS remains the same */
