@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 /* CSS code */
 body {
   background-color: #073b4c;
@@ -36,7 +37,7 @@ body {
 }
 
 .happy {
-  font-family: Arial, sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   text-align: center;
   margin: 30px;
   background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
