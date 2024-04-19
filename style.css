@@ -23,6 +23,9 @@ h2 {
  transform-style: preserve-3d;
  transform: perspective(2500px);
  transition: 1s;
+ background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Jeon_Jungkook_at_the_White_House%2C_31_May_2022.jpg/220px-Jeon_Jungkook_at_the_White_House%2C_31_May_2022.jpg");
+ background-size: cover;
+ border-radius: 20px; /* Adding border radius */
 }
 
 .cardFront {
@@ -192,16 +195,4 @@ p {
  }
 
  100% {
-  color: blue;
- }
-}
-footer{
- font-size: 10px;
- color: white;
- position: absolute;
- bottom: 0px;
-}
-footer a{
- color: white;
-}
-
+  color
